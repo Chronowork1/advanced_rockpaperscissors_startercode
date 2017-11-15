@@ -1,5 +1,37 @@
-.items {
+.items img {
     height: 150px;
-    width: 200px;
+    width: 150px;
+    position: center;
     
 }
+
+input {
+    padding: 5px;
+    font-size: 18px;
+}
+
+button {
+    background: red;
+    color: white;
+    padding: 7px;
+}
+
+body {
+    text-align: center;
+    position: center;
+    background-color: #E3F0FB;
+}
+
+#Click: hover {
+    background-color: #D98880;
+    cursor: pointer;
+    color: #F9EBEA;
+}
+
+#Click: active {
+    background-color: #D98880;
+    cursor: pointer;
+    color: #F9EBEA;
+}
+
+

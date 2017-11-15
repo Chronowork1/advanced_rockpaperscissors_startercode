@@ -21,9 +21,12 @@
 //GLOBAL VARIABLES
 
 
-
 //FUNCTIONS
 
+$(".rps").click(function(){
+    var name = $("input").val();
+    $("#result").append(name);
+    });
 
 
 // DOCUMENT READY FUNCTION
