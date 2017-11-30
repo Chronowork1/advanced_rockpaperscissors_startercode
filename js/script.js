@@ -19,15 +19,38 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
+// DOCUMENT READY FUNCTION
 
-
+/*$(document).ready(function(){
 //FUNCTIONS
 
 $(".rps").click(function(){
     var name = $("input").val();
     $("#result").append(name);
     });
+    */
+    
+// Chances of divinding.
+var rps= ["rock", "paper", "scissor"]    
+
+var kevin= Math.floor(Math.random())
+   if(kevin <=".33"){
+        kevin = "Paper";
+        }
+   else if (kevin <=".66"){
+        kevin = "scissor";       
+        }
+   else {
+        kevin = "rock";
+        }
+console.log(rps, kevin);
+//
+
+var number = function(choice){
+        
+}
 
 
-// DOCUMENT READY FUNCTION
+
+});
 
