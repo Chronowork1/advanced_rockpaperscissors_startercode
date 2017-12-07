@@ -21,36 +21,62 @@
 //GLOBAL VARIABLES
 // DOCUMENT READY FUNCTION
 
-/*$(document).ready(function(){
+$(document).ready(function(){
 //FUNCTIONS
 
-$(".rps").click(function(){
-    var name = $("input").val();
-    $("#result").append(name);
-    });
-    */
+
+    
     
 // Chances of divinding.
-var rps= ["rock", "paper", "scissor"]    
 
-var kevin= Math.floor(Math.random())
-   if(kevin <=".33"){
-        kevin = "Paper";
-        }
-   else if (kevin <=".66"){
-        kevin = "scissor";       
-        }
-   else {
-        kevin = "rock";
-        }
-console.log(rps, kevin);
+    
+/**/
+//console.log(rps, kevin);
+/*var rps= ["rock", "paper", "scissor"]*/    
+
+$("#Click").click(function() {
 //
+    var computerChoice= Math.random()
+   if(computerChoice <=0.33){
+    computer = "Paper";
+    } else if (computer <=0.66){
+    computer = "scissor";       
+    } else {
+    computer = "rock";
+    };
 
-var number = function(choice){
+var computerChoice = $(".computerChoice").val();
+var player = $(".player").val();
+    
+    //var winnerText = "not sure yet";
+
+    if(computerChoice === "rock" && player === "rock") {
+        winnerText = "It's a tie!";
+    } else if (computerChoice === "rock" && player === "paper") {
+        winnerText = "Player wins!";
+    } else if (computerChoice === "rock" && player === "scissor") {
+        winnerText = "computer wins!";
         
-}
-
-
-
+    } else if (computerChoice === "paper" && player === "paper") {
+        winnerText = "It's a tie!";
+    } else if (computerChoice === "paper" && player === "rock") {
+        winnerText = "computer wins!";
+    } else if (computerChoice === "paper" && player === "scissor") {
+        winnerText = "Player wins!";
+    }
+    
+    else if (computerChoice === "scissor" && player === "scissor") {
+        winnerText = "It's a tie!";
+    } else if (computerChoice === "scissor" && player === "paper") {
+        winnerText = "computer wins!";
+    } else if (computerChoice === "scissor" && player === "rock") {
+        winnerText = "Player wins!";
+    }
+    /* else if (...) {
+        Add conditionals for all the other possibilities
+    } */
+    
+    // show the winner text on the page
+    $("#winner").text(winnerText);
+    });
 });
-
