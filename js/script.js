@@ -23,32 +23,23 @@
 
 $(document).ready(function(){
 //FUNCTIONS
-
-
-    
-    
-// Chances of divinding.
-
-    
 /**/
 //console.log(rps, kevin);
 /*var rps= ["rock", "paper", "scissor"]*/    
 
-$("#Click").click(function() {
-//
-    var computerChoice= Math.random()
-   if(computerChoice <=0.33){
-    computer = "Paper";
-    } else if (computer <=0.66){
-    computer = "scissor";       
-    } else {
-    computer = "rock";
-    };
 
+var computerChoice= Math.random()
+    if(computerChoice <=0.33){
+        computerChoice = "paper";
+    } else if (computerChoice <=0.66){
+        computerChoice = "scissor";       
+    } else {
+        computerChoice = "rock";
+    };
+$("#Click").click(function() {
+    
 var computerChoice = $(".computerChoice").val();
 var player = $(".player").val();
-    
-    //var winnerText = "not sure yet";
 
     if(computerChoice === "rock" && player === "rock") {
         winnerText = "It's a tie!";
@@ -63,9 +54,9 @@ var player = $(".player").val();
         winnerText = "computer wins!";
     } else if (computerChoice === "paper" && player === "scissor") {
         winnerText = "Player wins!";
-    }
     
-    else if (computerChoice === "scissor" && player === "scissor") {
+
+    }else if (computerChoice === "scissor" && player === "scissor") {
         winnerText = "It's a tie!";
     } else if (computerChoice === "scissor" && player === "paper") {
         winnerText = "computer wins!";
@@ -75,8 +66,7 @@ var player = $(".player").val();
     /* else if (...) {
         Add conditionals for all the other possibilities
     } */
-    
     // show the winner text on the page
-    $("#winner").text(winnerText);
+    $("#winner").text("winnerText");
     });
 });

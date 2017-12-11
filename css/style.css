@@ -20,6 +20,7 @@ body {
     text-align: center;
     position: center;
     background-color: #E3F0FB;
+    background: url(pattern.gif) repeat #F5F5E9;
 }
 
 #Click: hover {
@@ -35,5 +36,20 @@ body {
 }
 
 .space{
-    height: 170px;
+    margin: 150px;
 }
+
+.space2{
+    margin: 60px;
+}
+
+.whole {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 10px;
+}
+
