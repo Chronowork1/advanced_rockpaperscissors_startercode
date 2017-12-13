@@ -26,8 +26,8 @@ $(document).ready(function(){
 /**/
 //console.log(rps, kevin);
 /*var rps= ["rock", "paper", "scissor"]*/    
-
-
+ $("#Click").click(function(){
+    
 var computerChoice= Math.random()
     if(computerChoice <=0.33){
         computerChoice = "paper";
@@ -36,9 +36,8 @@ var computerChoice= Math.random()
     } else {
         computerChoice = "rock";
     };
-$("#Click").click(function() {
-    
-var computerChoice = $(".computerChoice").val();
+
+var computerChoice = $("#computerChoice").val();
 var player = $(".player").val();
 
     if(computerChoice === "rock" && player === "rock") {
