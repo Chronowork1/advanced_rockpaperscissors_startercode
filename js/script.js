@@ -37,7 +37,8 @@ var computerChoice= Math.random()
         computerChoice = "rock";
     };
 
-var computerChoice = $("#computerChoice").val();
+$("#computerChoice").text(computerChoice);
+
 var player = $(".player").val();
 
     if(computerChoice === "rock" && player === "rock") {
@@ -66,6 +67,6 @@ var player = $(".player").val();
         Add conditionals for all the other possibilities
     } */
     // show the winner text on the page
-    $("#winner").text("winnerText");
+    $("#Winner").text(winnerText);
     });
 });
