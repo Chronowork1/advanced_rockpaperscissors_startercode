@@ -2,7 +2,6 @@
 <html>
 
   <head>
-    <title>RPS Game</title>
       <!-- Link CSS here -->
       
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -17,6 +16,11 @@
   </head>
 
   <body>
+    <header>Rock, Paper, Scissor Game</header>
+    <div>
+      <h1>Instructions</h1>
+      <p>Click one of the following images below and hope to win.</p>
+    </div>
       <!-- TASK 1: In the div below. 
         1. In a header tag, add a title.
         2. In a paragraph tag, add instructions on how to play the game.
@@ -26,26 +30,24 @@
         6. Add a div to record the Winner.
      -->
     <div class="whole">
-      <div class="Spance"></div>
-      <div class="container text-center">
-      <div class="space"></div>
       <div class="items">
-        <img src="https://www.gobigrock.com/wp-content/uploads/2016/10/Fieldstone.png">
-        <img src="https://i5.walmartimages.com/asr/950a3698-948a-4b03-b9a2-749e60647413_1.4159329e4088f2c525b3a0bbf37b3caf.jpeg">
-        <img src="https://officedepot.scene7.com/is/image/officedepot/375667_scene7?$OD%2DLarge$">  
+        <img src="https://images.unsplash.com/photo-1512921709377-a2822d4e27c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" id= "Rock">
+        <img src="https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80" id= "Paper">
+        <img src="https://images.unsplash.com/photo-1526375917602-fa107bfa0f77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" id= "Scissor">
       </div>
       
-      <div class=space2>
+      <h1 id="results"></h1>
+      <h1 id="record"></h1>
+        
+    </div>
+  </body>
+
+</html>
+     <!-- <div class=space2>
         <input class="player" placeholder="Rock, Paper or Scissor">
         <button class="rps" id="Click">Press</button>
       </div>
       
       <div id="result"></div>
       <p id="computerChoice"></p>
-        <p id="Winner"></p>
-        
-      </div>
-    </div>
-  </body>
-
-</html>
+        <p id="Winner"></p>-->

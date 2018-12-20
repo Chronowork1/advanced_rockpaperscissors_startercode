@@ -20,22 +20,121 @@
 
 //GLOBAL VARIABLES
 // DOCUMENT READY FUNCTION
-
+/* global $ */
 $(document).ready(function(){
+    //$().click(function(){
+    //});
+  function randomNumber(input){
+    let randomNum = Math.floor(Math.random(input)*Math.floor(input)+1);
+    return randomNum;
+  }
+  
+  function randomGen(){
+    if (randomNumber(9) <= 3){
+      return "Rock";
+    }else if(randomNumber(9) <= 6){
+      return "Scissor";
+    }else if (randomNumber(9) <= 9){
+      return "Paper";
+    }
+  }
+    console.log(randomGen());
+    
+  let Paper = document.getElementById('Paper');
+  Paper.onclick = function(){
+    let paper = "paper";
+    let rock = "rock";
+    let scissor = "scissor";
+    let winnerText = " ";
+    if(randomGen() === "Paper" && paper){
+      winnerText = "It's a tie!";
+    }else if(randomGen() === "Paper" && rock){
+      winnerText = "Computer Wins!";
+    }else {
+      winnerText = "Player wins!";
+    }
+    console.log(winnerText);
+    $("#results").text(winnerText);
+  };
+
+  let Rock = document.getElementById('Rock');
+  Rock.onclick = function(){
+    let paper = "paper";
+    let rock = "rock";
+    let scissor = "scissor";
+    let winnerText = " ";
+    if(randomGen() === "Rock" && rock){
+      winnerText = "It's a tie!";
+    }else if(randomGen() === "Rock" && scissor){
+      winnerText = "Computer Wins!";
+    }else{
+      winnerText = "Player wins!";
+    }
+  console.log(winnerText);
+  $("#results").text(winnerText);
+  };
+  
+  let Scissor = document.getElementById('Scissor');
+  Scissor.onclick = function(){
+    let paper = "paper";
+    let rock = "rock";
+    let scissor = "scissor";
+    let winnerText = " ";
+    if(randomGen() === "Scissor" && scissor){
+      winnerText = "It's a tie!";
+    }else if(randomGen() === "Scissor" && paper){
+      winnerText = "Computer Wins!";
+    }else{
+      winnerText = "Player wins!";
+    }
+  console.log(winnerText);
+  $("#results").text(winnerText);
+  };
+  
+});
+  /*function deciding(){
+    let paper = "paper";
+    let rock = "rock";
+    let scissor = "scissor";
+    let winnerText = " ";
+    if(randomGen()==="Rock" && rock){
+      winnerText="It's a tie!";
+    }else if(randomGen()==="Rock" && paper){
+      winnerText= "Player wins!";
+    }else if(randomGen()==="Rock" && scissor){
+      winnerText= "Computer Wins!";   
+    }else if(randomGen()==="Paper" && rock){
+      winnerText = "Computer Wins!";
+    }else if (randomGen()=== "Paper" && paper){
+      winnerText = "It's a tie!";
+    }else if(randomGen()=== "Paper" && scissor){
+      winnerText = "Player wins!";
+    }else if(randomGen() === "Scissor" && rock){
+      winnerText = "Player wins!";
+    }else if (randomGen() === "Scissor" && paper){
+      winnerText = "Computer wins";
+    }else if (randomGen() === "Scissor" && scissor){
+      winnerText = "It's a tie!";
+    }
+  }
+  console.log(deciding());*/
+
+
 //FUNCTIONS
 /**/
 //console.log(rps, kevin);
 /*var rps= ["rock", "paper", "scissor"]*/    
- $("#Click").click(function(){
+/* $("#Click").click(function(){
     
-var computerChoice= Math.random()
+var computerChoice= Math.random();
+
     if(computerChoice <=0.33){
         computerChoice = "paper";
     } else if (computerChoice <=0.66){
         computerChoice = "scissor";       
     } else {
         computerChoice = "rock";
-    };
+    }
 
 $("#computerChoice").text(computerChoice);
 
@@ -67,6 +166,6 @@ var player = $(".player").val();
         Add conditionals for all the other possibilities
     } */
     // show the winner text on the page
-    $("#Winner").text(winnerText);
-    });
-});
+   // $("#Winner").text(winnerText);
+    //});
+//});
