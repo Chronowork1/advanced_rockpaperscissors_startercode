@@ -46,15 +46,18 @@ $(document).ready(function(){
     let rock = "rock";
     let scissor = "scissor";
     let winnerText = " ";
+    let playerWin = 0;
     if(randomGen() === "Paper" && paper){
       winnerText = "It's a tie!";
     }else if(randomGen() === "Paper" && rock){
       winnerText = "Computer Wins!";
     }else {
       winnerText = "Player wins!";
+      playerWin +1 ;
     }
     console.log(winnerText);
     $("#results").text(winnerText);
+    $("#record").html(playerWin);
   };
 
   let Rock = document.getElementById('Rock');

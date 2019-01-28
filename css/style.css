@@ -1,24 +1,40 @@
+header{
+  font-family: helvetica;
+  font-size: 50px;
+}
+
+#instructions{
+  font-size: 40px;
+  font-weight: normal;
+  font-family:times;
+}
+
 .items img {
     height: 150px;
     width: 150px;
-    position: center;
-    
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-input {
+#results {
+  margin-bottom: 20px;
+}
+
+/*input {
     padding: 5px;
     font-size: 18px;
-}
+}*/
 
-button {
+/*button {
     background: red;
     color: white;
     padding: 7px;
-}
+}*/
 
 body {
     text-align: center;
-    position: center;
+    position: static;
     background-color: #E3F0FB;
 }
 
@@ -43,13 +59,8 @@ body {
 }
 
 .whole {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
-    border-style: solid;
-    border-color: gray;
+    margin: 20px;
     border-width: 10px;
-    height:200px;
+    height:240px;
 }
 
