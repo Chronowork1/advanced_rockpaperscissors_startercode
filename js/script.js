@@ -28,6 +28,7 @@ $(document).ready(function(){
     let randomNum = Math.floor(Math.random(input)*Math.floor(input)+1);
     return randomNum;
   }
+  console.log(randomNumber(9));
   
   function randomGen(){
     if (randomNumber(9) <= 3){
@@ -38,7 +39,9 @@ $(document).ready(function(){
       return "Paper";
     }
   }
-    console.log(randomGen());
+  
+    var playerWin = 0;
+    var computerWin = 0; 
     
   let Paper = document.getElementById('Paper');
   Paper.onclick = function(){
@@ -46,18 +49,18 @@ $(document).ready(function(){
     let rock = "rock";
     let scissor = "scissor";
     let winnerText = " ";
-    let playerWin = 0;
     if(randomGen() === "Paper" && paper){
       winnerText = "It's a tie!";
     }else if(randomGen() === "Paper" && rock){
       winnerText = "Computer Wins!";
+      computerWin += 1;
     }else {
       winnerText = "Player wins!";
-      playerWin +1 ;
+      playerWin += 1 ;
     }
-    console.log(winnerText);
     $("#results").text(winnerText);
-    $("#record").html(playerWin);
+    $("#playerWin").html(playerWin);
+    $("#computerWin").html(computerWin);
   };
 
   let Rock = document.getElementById('Rock');
@@ -70,11 +73,14 @@ $(document).ready(function(){
       winnerText = "It's a tie!";
     }else if(randomGen() === "Rock" && scissor){
       winnerText = "Computer Wins!";
+      computerWin += 1;
     }else{
       winnerText = "Player wins!";
+      playerWin += 1;
     }
-  console.log(winnerText);
   $("#results").text(winnerText);
+  $("#playerWin").html(playerWin);
+  $("#computerWin").html(computerWin);
   };
   
   let Scissor = document.getElementById('Scissor');
@@ -87,11 +93,15 @@ $(document).ready(function(){
       winnerText = "It's a tie!";
     }else if(randomGen() === "Scissor" && paper){
       winnerText = "Computer Wins!";
+      computerWin += 1;
     }else{
       winnerText = "Player wins!";
+      playerWin += 1;
     }
-  console.log(winnerText);
+    
   $("#results").text(winnerText);
+  $("#playerWin").html(playerWin);
+  $("#computerWin").html(computerWin);
   };
   
 });
